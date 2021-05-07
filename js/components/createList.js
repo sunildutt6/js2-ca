@@ -1,4 +1,4 @@
-import { getFromStorage } from "../utils/saveFunctions.js";
+import { getFromStorage, saveToStorage } from "../utils/saveFunctions.js";
 
 const favourites = getFromStorage();
 
@@ -11,7 +11,7 @@ export default function createList(data) {
       console.log(fav);
       return parseInt(fav.id) === product.id;
     });
-    console.log(isFavouriteExist);
+
     if (isFavouriteExist) {
       cssClass = "fa";
     }
@@ -48,7 +48,4 @@ export default function createList(data) {
       saveToStorage(newFavs);
     }
   }
-}
-function saveToStorage(favs) {
-  localStorage.setItem("favourites", JSON.stringify(favs));
 }

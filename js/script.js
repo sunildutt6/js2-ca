@@ -5,7 +5,7 @@ import searchData from "./components/searchData.js";
 
 const url = baseUrl + "articles";
 
-(async function () {
+(async function (data) {
   try {
     const response = await fetch(url);
     const data = await response.json();

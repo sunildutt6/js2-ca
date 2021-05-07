@@ -27,13 +27,19 @@ body {
   font-size: 1.5rem;
 }
 .product i.fa{
-  color: red;
+  color: green;
 }
+
+
+
 
 .search{
   border-radius: 1rem;
   padding:0.5rem;
 
+}
+.no-product{
+  font-size: 2rem;
 }
 .message {
   width: 50%;
@@ -59,5 +65,11 @@ body {
   border: rgba(0, 128, 0, 0.801);
   color: white;
   background-color: rgba(0, 128, 0, 0.808);
+  box-shadow: 10px 10px 10px  ;
+}
+.message.pure{
+  border: rgba(0, 128, 0, 0);
+  color: black;
+  background-color: white;
   box-shadow: 10px 10px 10px  ;
 }
