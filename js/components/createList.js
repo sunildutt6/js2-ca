@@ -1,20 +1,13 @@
 import { getFromStorage, saveToStorage } from "../utils/saveFunctions.js";
-
 const favourites = getFromStorage();
 
 export default function createList(data) {
   const container = document.querySelector(".product-container");
   container.innerHTML = "";
   data.forEach(function (product) {
-    let cssClass = "far";
-    const isFavouriteExist = favourites.find(function (fav) {
-      console.log(fav);
-      return parseInt(fav.id) === product.id;
-    });
+    const isFavouriteExist = favourites.find((fav) => parseInt(fav.id) === product.id);
 
-    if (isFavouriteExist) {
-      cssClass = "fa";
-    }
+    let cssClass = isFavouriteExist ? "fa" : "far";
 
     container.innerHTML += `<div class=  "product">
                     <h3> ${product.title}</h3>
@@ -31,14 +24,14 @@ export default function createList(data) {
   function handelClick() {
     this.classList.toggle("fa");
     this.classList.toggle("far");
+
     const id = this.dataset.id;
     const name = this.dataset.name;
     const author = this.dataset.author;
     const summary = this.dataset.summary;
     const currentFavs = getFromStorage();
-    const itemExists = currentFavs.find(function (fav) {
-      return fav.id === id;
-    });
+    const itemExists = currentFavs.find((fav) => fav.id === id);
+
     if (!itemExists) {
       const item = { id: id, name: name, summary: summary, author: author };
       currentFavs.push(item);

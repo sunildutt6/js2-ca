@@ -13,6 +13,7 @@ export function getFavourite() {
     displayError("pure", "😔You don't have favourites selected.😔", ".product-container");
     buttonClear.style.display = "none";
   }
+  
   favouritesProduct.forEach((favourite) => {
     productContainer.innerHTML += `<div class="product">
                                 <h3>${favourite.name}</h3>
