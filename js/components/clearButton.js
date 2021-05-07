@@ -6,6 +6,6 @@ export default function clearButton() {
 
   function clearAll() {
     localStorage.clear();
-    createList();
+    
   }
 }

@@ -9,7 +9,6 @@ export default function searchData(data) {
         return true;
       }
     });
-    data = filteredData;
     createList(filteredData);
   };
 }
