@@ -3,7 +3,11 @@ import createList from "./components/createList.js";
 import displayError from "./components/displayError.js";
 import searchData from "./components/searchData.js";
 
+
 const url = baseUrl + "articles";
+
+
+
 
 (async function () {
   try {
