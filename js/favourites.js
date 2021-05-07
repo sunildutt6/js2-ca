@@ -10,15 +10,20 @@ export function getFavourite() {
   const productContainer = document.querySelector(".product-container");
 
   if (favouritesProduct.length === 0) {
-    displayError("pure", "😔You don't have favourites selected.😔", ".product-container");
+    displayError(
+      "pure",
+      "😔You don't have favourites selected.😔",
+      ".product-container"
+    );
     buttonClear.style.display = "none";
   }
-  
+
   favouritesProduct.forEach((favourite) => {
     productContainer.innerHTML += `<div class="product">
                                 <h3>${favourite.name}</h3>
+                                <hr />
                                 <p>Description: ${favourite.summary}</p>
-                                <h4>By: ${favourite.author}</p>
+                                <h4>Author: ${favourite.author}</p>
                                 <i class= "fa fa-heart"></i>
                                 </div>`;
   });

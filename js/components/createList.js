@@ -6,9 +6,7 @@ export default function createList(data) {
   container.innerHTML = "";
   data.forEach(function (product) {
     const isFavouriteExist = favourites.find((fav) => parseInt(fav.id) === product.id);
-
     let cssClass = isFavouriteExist ? "fa" : "far";
-
     container.innerHTML += `<div class=  "product">
                     <h3> ${product.title}</h3>
                     <hr>
