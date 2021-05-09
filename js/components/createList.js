@@ -5,13 +5,16 @@ export default function createList(data) {
   const container = document.querySelector(".product-container");
   container.innerHTML = "";
   data.forEach(function (product) {
-    const isFavouriteExist = favourites.find((fav) => parseInt(fav.id) === product.id);
+    const isFavouriteExist = favourites.find(
+      (fav) => parseInt(fav.id) === product.id
+    );
     let cssClass = isFavouriteExist ? "fa" : "far";
     container.innerHTML += `<div class=  "product">
                     <h3> ${product.title}</h3>
                     <hr>
                     <p>Description: ${product.summary}</p>
                     <h4 class= "mt-5 text-center">By: ${product.author}</h4>
+                   <a href ="edit.html?id=${product.id}"><i class="far fa-edit"></i></a>
                 <i class="${cssClass} fa-heart " data-id= "${product.id}" data-name="${product.title}" data-summary= "${product.summary}" data-author = "${product.author}"></i>
             </div>`;
   });

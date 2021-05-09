@@ -2,8 +2,11 @@ import { baseUrl } from "./settings/api.js";
 import createList from "./components/createList.js";
 import displayError from "./components/displayError.js";
 import searchData from "./components/searchData.js";
+import { menuCreator } from "./components/menuCreator.js";
+
 
 const url = baseUrl + "articles";
+menuCreator();
 
 (async function (data) {
   try {

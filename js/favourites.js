@@ -1,8 +1,12 @@
 import clearButton from "./components/clearButton.js";
 import displayError from "./components/displayError.js";
+import { menuCreator } from "./components/menuCreator.js";
 import { getFromStorage } from "./utils/saveFunctions.js";
 
+menuCreator();
 clearButton();
+
+
 
 export function getFavourite() {
   const buttonClear = document.querySelector("#clear");

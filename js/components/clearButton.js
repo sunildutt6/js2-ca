@@ -6,7 +6,7 @@ export default function clearButton() {
   clearButton.addEventListener("click", clearAll);
 
   function clearAll() {
-    if (confirm("Are you sure to clear?")) {
+    if (confirm ("Are you sure to clear?")) {
       localStorage.clear();
       getFavourite();
     }
